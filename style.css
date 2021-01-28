@@ -26,12 +26,12 @@ section h1{
 .centerdiv{
     width: 500px;
     height: 400px;
-    background-color: blue;
+    background-color: light blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 1px 1px 10px 10px yellow;
+    box-shadow: 1px 1px 10px 10px magenta;
 }
 
 .insertbox{
