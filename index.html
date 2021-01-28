@@ -1,1 +1,57 @@
-"Hello World" 
+<!DOCTYPE html>
+<htlm>
+    <head>
+        <title>Times Table Quiz</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <section>
+            <h1>Wellcome to</h1>
+            <h1 id="Name">Times Table Quiz</h1>
+            <div class="centerdiv">
+                <div class="insertbox">
+                    <div class="box1">
+                        <input type="text" id="v1">
+                    </div>
+                    <div class="box1">
+                        <p>x</p>
+                    </div>
+                    <div class = "box1">
+                        <input type="text" id="v2">
+                    </div>
+                </div>
+
+                <div class="middlebox">
+                    <input type="text" id="answer">
+                </div>
+
+                <div class="sentbox">
+                    <button onclick="Quiz()">Check Answer</button>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            let num1 = Math.floor(Math.random() * (19 - 12 + 1) + 12);
+            let num2 = Math.floor(Math.random() * 10) + 1;
+            let answer = num1 * num2;
+            document.getElementById('v1').value = num1;
+            document.getElementById('v2').value = num2;
+            const Quiz = () =>{
+                var  ans = document.getElementById('answer').value;
+                console.log(ans);
+                if(ans == answer){
+                    alert('Great! Your input is correct');
+                }else{
+                    alert('Your input is incorrect ' + ' the correct answer is : '+ answer);
+                }
+                document.getElementById('answer').value = "";
+                num1 = Math.floor(Math.random() * (19 - 12 + 1) + 12);
+                num2 = Math.floor(Math.random() * 10) + 1;
+                answer = num1 * num2;
+                document.getElementById('v1').value = num1;
+                document.getElementById('v2').value = num2;
+            }
+        </script>
+    </body>
+</htlm>
